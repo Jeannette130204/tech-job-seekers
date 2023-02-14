@@ -6,10 +6,18 @@ import AuthPage from '../AuthPage/AuthPage'
 import JobPage from '../JobPage/JobPage'
 import NavBar from '../../components/NavBar/NavBar'
 import MainPage from '../MainPage/MainPage'
+import JobDetailsPage from '../JobDetailsPage/JobDetailsPage'
 import { getUser } from '../../utilities/users-service';
-
+import Job from '../JobDetailsPage/JobDetailsPage'
+import axios from 'axios'
 export default function App() {
-  const [user, setUser] = useState([getUser()])//getUser()
+  const [user, setUser] = useState(getUser())//getUser()
+
+  const [jobList, setJobList] = useState([{}])
+
+  async function handleCheckToken(){
+      axios.get('http://localhost:3001/api/jobs/jobs')
+      .then(res => setJobList(res.data))}
 
   return (
     <main className="App">
@@ -20,7 +28,9 @@ export default function App() {
           {/*Route components in here */}
           <Route path='/' element={<MainPage/>}></Route>
           <Route path='/jobs/new' element={<NewJobPage />} />
-          <Route path='/jobs' element = {<JobPage />} />
+          <Route path='/jobs' element = {<JobPage jobList={jobList} setJobList={setJobList} handleCheckToken={handleCheckToken}/>} />
+          <Route path='/jobs/:id' element = {< JobDetailsPage jobList={jobList}/>} />
+
         </Routes>
         </>
         :

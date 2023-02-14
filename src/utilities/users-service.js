@@ -1,5 +1,12 @@
 import * as usersAPI from './users-api'
 
+
+function findJob(job, title){
+    return Array.fing((e) => {
+        return e.title ===title
+    })
+}
+
 export async function signUp(userData) {
     const token = await usersAPI.signUp(userData)
 

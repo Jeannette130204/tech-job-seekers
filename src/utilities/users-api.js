@@ -1,4 +1,4 @@
-import {getToken } from './users-service'
+import { getToken } from './users-service'
 
 const BASE_URL = '/api/users'
 
@@ -16,11 +16,14 @@ export function checkToken(){
 async function sendRequest(url, method = 'GET', payload = null){
     const options = { method }
     if(payload){
+        options.headers = { 'Access-Control-Allow-Origin': '*' }
         options.headers = { 'Content-Type': 'application/json' }
         options.body = JSON.stringify(payload)
     }
     const token = getToken()
     if (token) {
+        options.headers = { 'Access-Control-Allow-Origin': '*', 'Access-Control-Allow-Credentials': 'true' }
+        // options.headers = {'Access-Control-Allow-Methods': 'POST, PUT, PATCH, GET, DELETE, OPTIONS', 'Access-Control-Allow-Origin': '*' , 'Access-Control-Allow-Headers': 'Origin, X-Api-Key, X-Requested-With, Content-Type, Accept, Authorization' }
         options.headers = options.headers || {}
         options.headers.Autorization = `Bearer ${token}`
     }

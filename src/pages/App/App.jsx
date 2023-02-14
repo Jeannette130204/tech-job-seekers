@@ -8,7 +8,6 @@ import NavBar from '../../components/NavBar/NavBar'
 import MainPage from '../MainPage/MainPage'
 import { getUser } from '../../utilities/users-service';
 
-
 export default function App() {
   const [user, setUser] = useState([getUser()])//getUser()
 

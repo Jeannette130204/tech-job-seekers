@@ -39,7 +39,14 @@ p{
   margin-bottom:25px;
 }
 #page-title{
-padding-top: 25px;
+padding-bottom: 25px;
+}
+#job-card{
+  border: 5px solid rgb(66, 9, 139);
+  border-radius:10px;
+  width: 600px;
+  margin: 0 auto;
+  margin-bottom:25px;
 
 }
 label{

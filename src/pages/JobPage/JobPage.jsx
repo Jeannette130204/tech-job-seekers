@@ -1,5 +1,6 @@
 import axios from 'axios'
 import { useState } from 'react'
+import JobCard from "../../components/JobCard/JobCard"
 
 export default function OrderHistoryPage(){
 
@@ -14,10 +15,10 @@ export default function OrderHistoryPage(){
     }
     return (
         <>
-        <h1>Order History Page</h1>
+        <h1>Jobs Hiring</h1>
         <button onClick={handleCheckToken}>Check</button>
         {
-        jobList.map(job => <p>{job.title}</p>)
+        jobList.map(job => < JobCard job={job}/>)
     }
         </>
     )

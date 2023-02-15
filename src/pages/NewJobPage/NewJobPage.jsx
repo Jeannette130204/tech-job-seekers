@@ -1,14 +1,17 @@
 import { useState } from "react"
 import { postJob } from "../../utilities/users-service";
 import axios from "axios";
+import * as userService from '../../utilities/users-service'
 
-export default function AddJob () {
+
+export default function AddJob ({user}) {
         const initialPost = {
             title: '',
             company: '',
             description: '',
             location: '',
-            link: ''
+            link: '',
+            createdBy: user.name
         }
 
         const [post, setPost] = useState(initialPost)
@@ -27,7 +30,6 @@ export default function AddJob () {
             // postJob(post)
             setPost(initialPost)
         }
-    
     return (
         <>
         <h1 id="new-job-title">Create New Job Post</h1>

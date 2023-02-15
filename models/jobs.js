@@ -22,6 +22,10 @@ const jobSchema = new Schema({
     link: {
         type: String, 
         required: true
+    },
+    createdBy: {
+        type:String,
+        required: true
     }
 })
 

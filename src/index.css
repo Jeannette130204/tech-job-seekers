@@ -41,6 +41,11 @@ p{
 #page-title{
 padding-bottom: 25px;
 }
+#block{
+  background-color: rgba(203, 186, 250, 0.5);
+  padding-top: 25px;
+  padding-bottom: 25px;
+}
 #job-card{
   border: 5px solid rgb(66, 9, 139);
   border-radius:10px;
@@ -48,6 +53,22 @@ padding-bottom: 25px;
   margin: 0 auto;
   margin-bottom:25px;
 
+}
+.detail-buttons{
+  margin-top: 30px;
+  background-color:rgb(255, 255, 255, .5);
+}
+#job-detail{
+  background-image: url('https://images.wallpaperscraft.com/image/single/universe_cosmos_colorful_168900_1280x720.jpg');
+  margin: 0 auto;
+  margin-left:100px;
+  margin-right:100px;
+  margin-top: 200px;
+  padding-top: 100px;
+  padding-bottom: 25px;
+  color: white;
+  border-radius: 20px;
+  border: 5px solid black;
 }
 label{
   color: black;

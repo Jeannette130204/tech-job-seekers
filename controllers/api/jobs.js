@@ -18,9 +18,9 @@ async function deletePost(req,res, next){
     console.log('Deleted')
 }
 async function edit(req,res){
-const updatedJob = await Job.findByIdAndUpdate(req.params.id, req.body, {new:true})
+const updatedJob = await Job.findByIdAndUpdate(req.params._id, req.body, {new:true})
 if(updatedJob){
-    res.json(updatedUser)
+    res.json(updatedJob)
 }else{
     res.sendStatus(404)
 

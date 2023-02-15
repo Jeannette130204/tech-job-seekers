@@ -1,13 +1,16 @@
 import { useNavigate, useParams } from "react-router-dom";
 import axios from "axios";
 import React, { useState } from 'react';
+import EditJobPage from "../EditJobPage/EditJobPage"
 
 
 export default function JobDetailsPage({ jobList, handleDelete, user }) {
     const navigate = useNavigate()
-  let { id } = useParams();
-  const job = jobList.find((job) => job._id == id);
+    const [editMode, setEditMode] = useState(false);
 
+  let { id } = useParams();
+  console.log(id)
+  const job = jobList.find((job) => job._id == id);
   function handleDeleteClick(){
     handleDelete(job._id)
 
@@ -20,32 +23,40 @@ export default function JobDetailsPage({ jobList, handleDelete, user }) {
       if (res.status == 200) navigate('/jobs')
     })
   }
-  console.log(job.link)
-
   return (
     <div id="job-detail">
-      <section id="block">
-        <h1>Job Title: {job.title}</h1>
-        <p>Company: {job.company}</p>
-        <p>Description: {job.description}</p>
-        <p>Location: {job.location}</p>
-        <p>
-            <a target="_blank" href={job.link}>Link</a>
-        </p>
-      </section>
-
-      <section>
-        {/* CONDITIONAL RENDERING: IF USER.NAME == POST.CREATEDBY RENDER BUTTON, IF NOT, RENDER '' */}
-        {/*  CONDITIONAL EXAMPLE    user.name == post.createdby ? <button></button> : '' ;    */}
-        {job.createdBy==user.name ? 
-        <div>
-            <button className="detail-buttons">Edit</button>
-            <button className="detail-buttons" onClick={handleDeleteClick}>Delete</button>
-        </div>
-        :
-        ""
-        }
-        </section>
+      {editMode ? (
+        <EditJobPage jobList={jobList} />
+      ) : (
+        <>
+          <section id="block">
+            <h1>Job Title: {job.title}</h1>
+            <p>Company: {job.company}</p>
+            <p>Description: {job.description}</p>
+            <p>Location: {job.location}</p>
+            <p>
+              <a target="_blank" href={`https://${job.link}`}>
+                Link
+              </a>
+            </p>
+          </section>
+  
+          <section>
+            {job.createdBy == user.name ? (
+              <div>
+                <button className="detail-buttons" onClick={() => setEditMode(true)}>
+                  Edit
+                </button>
+                <button className="detail-buttons" onClick={handleDeleteClick}>
+                  Delete
+                </button>
+              </div>
+            ) : (
+              ""
+            )}
+          </section>
+        </>
+      )}
     </div>
   );
-}
+ }

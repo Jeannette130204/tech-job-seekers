@@ -4,7 +4,7 @@ import axios from "axios";
 import * as userService from '../../utilities/users-service'
 
 
-export default function AddJob ({user}) {
+export default function NewJobPage ({user}) {
         const initialPost = {
             title: '',
             company: '',

@@ -15,9 +15,6 @@ export default function JobList({jobList, setJobList, handleCheckToken}){
         setJobList(newJobList)
     }
 
-        // const expDate = await checkToken()
-        // console.log(expDate)
-    
     return (
         <>
         <h1>Jobs Hiring</h1>

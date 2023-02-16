@@ -24,7 +24,6 @@ export default function NewJobPage ({user}) {
 const handleSubmit= async (e) =>{
     e.preventDefault()
     await axios.post('http://localhost:3001/api/jobs', post)
-    // postJob(post)
     setPost(initialPost)
 }
 return (
@@ -32,7 +31,7 @@ return (
 <div className="form">
 <h1 id="new-job-title">Create New Job Post</h1>
 <form onSubmit={handleSubmit}>
-    <label>Job title</label>
+    <label >Job title</label>
     <input type="text" name="title" value={post.title} onChange={handleChange}/>
     <label>Company</label>
     <input type="text" name="company" value={post.company} onChange={handleChange}/>

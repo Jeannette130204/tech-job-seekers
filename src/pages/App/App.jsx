@@ -16,6 +16,7 @@ export default function App() {
 
   const [jobList, setJobList] = useState([{}])
 
+
   async function handleCheckToken(){
       axios.get('http://localhost:3001/api/jobs/')
       .then(res => setJobList(res.data))}
@@ -32,7 +33,6 @@ export default function App() {
           <Route path='/jobs' element = {<JobPage jobList={jobList} setJobList={setJobList} handleCheckToken={handleCheckToken}/>} />
           <Route path='jobs/:id' element = {< JobDetailsPage jobList={jobList} user={user}/>} />
           <Route path='/edit/:id' element = {< EditJobPage jobList={jobList}/>} />
-
         </Routes>
         </>
         :

@@ -7,13 +7,10 @@ export default function JobCard({ job }){
         <div 
         id="job-card"
         onClick={() => navigate(`/jobs/${id}`)}>
-            <div></div>
-            <h1>{ job.title }</h1>
-            <p>{ job.company }</p>
-            
+            <div id="before">
+                <h1 id="card-h">Job Title: { job.title }</h1>
+                <div id="company" className="card-elements">Company: { job.company }</div>
+            </div>
         </div>
-
-
     )
-
 }

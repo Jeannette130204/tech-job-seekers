@@ -29,20 +29,22 @@ export default function EditJobPage({ jobList }) {
   return (
     <>
     <div >
-      <h1>Edit Job Post</h1>
+      <h1 id="editH">Edit Job Post</h1>
+      <div id="edit-block">
       <form onSubmit={handleSubmit}>
-        <label>Job title</label>
+        <label className="edit-label">Job title:</label>
         <input type="text" name="title" value={post.title} onChange={handleChange} />
-        <label>Company</label>
+        <label className="edit-label">Company:</label>
         <input type="text" name="company" value={post.company} onChange={handleChange} />
-        <label>Description</label>
+        <label className="edit-label">Description:</label>
         <input type="textarea" name="description" value={post.description} onChange={handleChange} />
-        <label>Location</label>
+        <label className="edit-label">Location:</label>
         <input type="text" name="location" value={post.location} onChange={handleChange} />
-        <label>Job Link</label>
+        <label className="edit-label">Job Link:</label>
         <input type="text" name="link" value={post.link} onChange={handleChange} />
-        <button type="submit">Update Job Post</button>
+        <button type="submit">Update Job Post:</button>
       </form>
+      </div>
       </div>
     </>
   );

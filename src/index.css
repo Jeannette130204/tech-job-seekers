@@ -2,7 +2,11 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
- }
+}
+#editH{
+  margin-bottom: 30px;
+}
+
 body {
   margin: 0px;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -10,6 +14,24 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+#card-h{
+  margin-top:15px;
+}
+#company{
+  font-size: 25px;
+  margin-top:20px;
+  margin-bottom:15px;
+}
+#edit-block{
+  padding:30px;
+}
+#main-header{
+  font-size: 55px;
+  font-weight: bold;
+}
+#page-d{
+  font-size: 22px;
 }
 nav{
   background-image: url('https://images.wallpaperscraft.com/image/single/universe_cosmos_colorful_168900_1280x720.jpg');
@@ -33,18 +55,20 @@ nav{
   padding-top: 30px;
 
 }
-
+#block{
+  font-size: 25px;
+}
 h1{
   margin:0 auto;
 }
 #main{
-  margin-top: 100px;
-}
-p{
-  width: 500px;
-  margin: 0 auto;
   margin-top: 25px;
-  font-size: 25px;
+  font-size: px;
+}
+
+img{
+  margin: 0 auto;
+  margin-top: 60px;
 }
 #new-job-title{
   margin-bottom:25px;
@@ -53,39 +77,82 @@ p{
 padding-bottom: 25px;
 }
 #block{
-  background-color: rgba(203, 186, 250, 0.5);
-  padding-top: 25px;
   padding-bottom: 25px;
+  margin: 0 auto;
+  text-align: center;
 }
 #job-card{
-  border: 5px solid rgb(66, 9, 139);
+  border:2px solid black;
   border-radius:10px;
   width: 600px;
+  text-align: center;
   margin: 0 auto;
   margin-bottom:25px;
 
 }
+#job-card:hover{
+  transform: scale(1.2);
+  transition-duration: 0.5s;
+}
+
 .detail-buttons{
   margin-top: 30px;
-  background-color:rgb(255, 255, 255, .5);
+  background-color:rgba(21, 4, 4, 0.5);
+}
+.box-borders{
+  background-image: url('https://images.wallpaperscraft.com/image/single/universe_cosmos_colorful_168900_1280x720.jpg');
+  width: 525px;
+  margin:0 auto;
+  margin-top:150px;
+  padding-top:15px;
+  padding-bottom:15px;
+  border: 5px solid black;
+}
+
+  .box-borders:hover {
+    transform: scale(1.2);
+    transition-duration: 0.5s;
+  }
+
+#ling{
+  text-align: center;
+}
+#buttons{
+  margin-bottom: 20px;
+}
+.details{
+
+  margin: 0 auto;
+  text-align:left;
+  margin-bottom:10px;
+  padding-left:30px
+}
+#details-title{
+  font-weight:bold;
+  font-size: 30px;
 }
 #job-detail{
-  background-image: url('https://images.wallpaperscraft.com/image/single/universe_cosmos_colorful_168900_1280x720.jpg');
+
+  width: 500px;
   margin: 0 auto;
-  margin-left:100px;
-  margin-right:100px;
-  margin-top: 200px;
-  padding-top: 100px;
+  padding-top: 50px;
   padding-bottom: 25px;
-  color: white;
-  border-radius: 20px;
+  color: black;
+  border-radius: 5px;
   border: 5px solid black;
+  background-color:rgb(250, 247, 250);
+  
 }
 label{
   color: black;
   font-weight: bolder;
   margin-left: 30px;
 }
+.edit-label{
+  color: black;
+  padding-bottom: 10px;
+}
+
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;

@@ -43,7 +43,7 @@ export default function JobDetailsPage({ jobList, handleDelete, user }) {
                 <strong>Location</strong> {job.location}
               </p>
               <p id="link">
-                <a target="_blank" href={`https://${job.link}`}>
+                <a target="_blank" href={`${job.link}`}>
                   Link
                 </a>
               </p>

@@ -42,7 +42,7 @@ export default function EditJobPage({ jobList }) {
         <input type="text" name="location" value={post.location} onChange={handleChange} />
         <label className="edit-label">Job Link:</label>
         <input type="text" name="link" value={post.link} onChange={handleChange} />
-        <button type="submit">Update Job Post:</button>
+        <button type="submit">Update Job Post</button>
       </form>
       </div>
       </div>

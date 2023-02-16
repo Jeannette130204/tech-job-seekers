@@ -31,15 +31,15 @@ return (
 <div className="form">
 <h1 id="new-job-title">Create New Job Post</h1>
 <form onSubmit={handleSubmit}>
-    <label >Job title</label>
+    <label >Job title:</label>
     <input type="text" name="title" value={post.title} onChange={handleChange}/>
-    <label>Company</label>
+    <label>Company:</label>
     <input type="text" name="company" value={post.company} onChange={handleChange}/>
-    <label>Description</label>
+    <label>Description:</label>
     <input type="textarea" name="description" value={post.description} onChange={handleChange}/>
-    <label>Location</label>
+    <label>Location:</label>
     <input type="text" name="location" value={post.location} onChange={handleChange}/>
-    <label>Job Link</label>
+    <label>Job Link:</label>
     <input type="text" name="link" value={post.link} onChange={handleChange}/>
     <button type="submit">Add New Job Post</button>           
 </form>

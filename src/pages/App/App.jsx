@@ -17,9 +17,9 @@ export default function App() {
   const [jobList, setJobList] = useState([{}])
 
 
-  async function handleCheckToken(){
-      axios.get('http://localhost:3001/api/jobs/')
-      .then(res => setJobList(res.data))}
+async function handleCheckToken(){
+  axios.get('http://localhost:3001/api/jobs/')
+  .then(res => setJobList(res.data))}
       
   return (
     <main className="App">

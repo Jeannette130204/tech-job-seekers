@@ -31,7 +31,11 @@ body {
   font-weight: bold;
 }
 #page-d{
-  font-size: 22px;
+  font-size: 30px;
+  margin: 0 auto;
+  width: 900px;
+  margin-top:30px;
+
 }
 nav{
   background-image: url('https://images.wallpaperscraft.com/image/single/universe_cosmos_colorful_168900_1280x720.jpg');
@@ -63,12 +67,11 @@ h1{
 }
 #main{
   margin-top: 25px;
-  font-size: px;
 }
 
 img{
   margin: 0 auto;
-  margin-top: 60px;
+  height: 600px;  
 }
 #new-job-title{
   margin-bottom:25px;
@@ -82,12 +85,12 @@ padding-bottom: 25px;
   text-align: center;
 }
 #job-card{
-  border:2px solid black;
-  border-radius:10px;
+  border:3px solid black;
   width: 600px;
   text-align: center;
   margin: 0 auto;
   margin-bottom:25px;
+  color: rgb(64, 21, 96); 
 
 }
 #job-card:hover{
@@ -99,26 +102,35 @@ padding-bottom: 25px;
   margin-top: 30px;
   background-color:rgba(21, 4, 4, 0.5);
 }
+#job-h{
+  font-size: 45px;
+}
 .box-borders{
   background-image: url('https://images.wallpaperscraft.com/image/single/universe_cosmos_colorful_168900_1280x720.jpg');
-  width: 525px;
+  width: 550px;
   margin:0 auto;
-  margin-top:150px;
-  padding-top:15px;
-  padding-bottom:15px;
-  border: 5px solid black;
+  margin-top: 75px;
+  padding-top:25px;
+  padding-bottom:25px;
+  border: 2px solid black;
 }
-
-  .box-borders:hover {
-    transform: scale(1.2);
-    transition-duration: 0.5s;
+#all-box{
+  border: 3px solid black;
+  margin: 30px;
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+.box-borders:hover {
+  transform: scale(1.1);
+  transition-duration: .5s;
   }
 
-#ling{
+#link{
   text-align: center;
+  margin-top: 20px;
 }
 #buttons{
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 }
 .details{
 
@@ -130,6 +142,9 @@ padding-bottom: 25px;
 #details-title{
   font-weight:bold;
   font-size: 30px;
+  text-align: center;
+  text-decoration: underline;
+  margin-bottom:40px;
 }
 #job-detail{
 
@@ -137,10 +152,10 @@ padding-bottom: 25px;
   margin: 0 auto;
   padding-top: 50px;
   padding-bottom: 25px;
-  color: black;
+  color: rgb(67, 7, 101);
   border-radius: 5px;
-  border: 5px solid black;
-  background-color:rgb(250, 247, 250);
+  border: 2px solid black;
+  background-color:white;
   
 }
 label{

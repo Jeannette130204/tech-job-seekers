@@ -1,9 +1,10 @@
 import { useState } from "react";
-import { useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import axios from "axios";
 
 export default function EditJobPage({ jobList }) {
   const { id } = useParams();
+  const navigate = useNavigate()
   const job = jobList.find((job) => job._id == id);
   const [post, setPost] = useState(job);
 
@@ -17,13 +18,18 @@ export default function EditJobPage({ jobList }) {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    await axios.put(`http://localhost:3001/api/jobs/edit/${post._id}`, post);
-    // await axios.put(`http://localhost:3001/api/jobs/edit/:_id`, post);
-  };
+    await axios.put(`http://localhost:3001/api/jobs/edit/${post._id}`, post)
+    .then((res)=>{
+      console.log(res)
+      if (res.status == 200) navigate('/jobs')
+    })
+  }
+
 
   return (
     <>
-      <h1 id="edit-job-title">Edit Job Post</h1>
+    <div >
+      <h1>Edit Job Post</h1>
       <form onSubmit={handleSubmit}>
         <label>Job title</label>
         <input type="text" name="title" value={post.title} onChange={handleChange} />
@@ -37,6 +43,7 @@ export default function EditJobPage({ jobList }) {
         <input type="text" name="link" value={post.link} onChange={handleChange} />
         <button type="submit">Update Job Post</button>
       </form>
+      </div>
     </>
   );
 }

@@ -1,6 +1,5 @@
 # Tech Job Seekers
 
-Image of Appointment System
 ![](./jobMain.png)
 
 Access: https://tech-job-seekers.herokuapp.com/

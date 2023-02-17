@@ -44,7 +44,7 @@ export default function JobDetailsPage({ jobList, handleDelete, user }) {
               </p>
               <p id="link">
                 <a target="_blank" href={`${job.link}`}>
-                  Link
+                  Go to {job.company} application
                 </a>
               </p>
             </section>

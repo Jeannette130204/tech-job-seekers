@@ -1,12 +1,12 @@
 # Tech Job Seekers
 
 Image of Appointment System
-![](./ProjectImage.png)
+![](./jobMain.png)
 
 Access: https://tech-job-seekers.herokuapp.com/
 
 ## Technologies used:
-=- JavaScript
+- JavaScript
 - HTML
 - CSS
 - MongoDB
@@ -21,9 +21,12 @@ Access: https://tech-job-seekers.herokuapp.com/
 - As a user, I want to be able to delete and edit their own postings and comments
 - As a user, I want to click the job post and see the details of the job
 
--
 # Wireframe:
-![](./newWireframe.png)
+![](./main.png)
+![](./jobs.png)
+![](./create.png)
+![](./recomendations.png)
+![](./git.png)
 
 ## Icebox: 
 - I want a get in touch page that has the school user has attended or if they are self-taught and their social media
